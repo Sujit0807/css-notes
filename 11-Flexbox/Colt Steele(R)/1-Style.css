@@ -1,0 +1,220 @@
+/* ---------------------------------------------------------------------------------------------------
+Flexbox : # Flexbox is a one dimentional layout method for laying out items in rows or columns
+          # Flexbox is a recent addition to CSS. Included to address common layout frustations.
+          # Flexbox allows us to distribute space dynamically across elements of an 
+          unknown size. Hence the term "Flex"
+
+
+
+Flex Container Properties : # flex-direction
+                            # justify-content
+                            # flex-wrap
+                            # align-items
+                            # align-content
+                            # flex-flow
+
+Flex Item Properties :  # align-self
+                        # flex-basis
+                        # flex-grow
+                        # flex-shrink
+                        # flex
+                        # Order 
+
+------------------------------------------------------------------------------------------------------                        
+
+1. flex-direction: row;  --> This property changes main-axis direction
+
+2. justify-content: flex-start;  -->  # it defines how the content will spaced/flow within a container
+                                      # it applies changes along the main-axis(start & end)
+
+3. flex-wrap: wrap;      --> # it maintains original height and width of flex-items
+                             # it arranges the flex-items along cross-axis 
+                             # it changes the cross-axis direction
+
+4. align-items: stretch;      --> # it applies properties along cross-axis
+                                  # default property is stretch
+
+5. align-content: space-between; --> # it used to distribute space along the cross axis when we have 
+                                        multiple rows or columns
+                                     $ simply means it controls space between cross-axis 
+
+
+                                        SHORTHAND
+
+flex-flow: row wrap;             --> # it is a shorthand for flex-direction and flex-wrap property
+
+------------------------------------------------------------------------------------------------------
+
+6. align-self: flex-end;         --> # it is very similar to align-items except it is property that
+                                        we add to single/individual item  
+                                     # it applies properties on items along cross-axis  
+                                     
+7. flex-basis: SIZEpx;           --> # Defines an initial size of an before additional space is 
+                                       distributed
+                                     # when it is used then width properties is ignored
+                                     # it is always used like width / applies properties 
+                                       along main-axis                 
+
+8. flex-grow: number(1-..);      --> # Controls the amount of available space an element should
+                                        take up.
+                                     # Accepts a unit-less number value.   
+                                     
+9. flex-shrink: number(1-..);    --> # it works opposite of flex-grow 
+                                     # if items are larger than container, they shrink according to
+                                        flex-shrink    
+ 
+10. order: number(1,2,..);         --> # it arranges the flex according to given order  
+
+
+                                        SHORTHAND
+flex: 1 2 300px;                   --> # it is a shorthand for the above properties.              
+--------------------------------------------------------------------------------------------------- */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    background-color: #003049;
+    width: 90%;
+    /* height: 500px; */
+    margin: 0 auto;
+    border: 5px solid #003049;
+
+    display: flex;
+
+    /* flex-direction */
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+
+    /* justify-content */
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    justify-content: flex-end; 
+    justify-content: center; 
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
+
+    /* flex-wrap */
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-wrap: wrap-reverse; 
+    flex-wrap: nowrap; 
+
+    /* align-items */
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;
+
+    /* align-content */
+    /* Here making width of items as 400px */
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: center;
+
+
+
+    /* align-self */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    /* flex-basis */
+    /* comment the height of flex-container */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* flex-basis */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-direction: column;
+
+    /* flex-grow */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* flex-shrink */
+    flex-wrap: nowrap;
+
+}
+ 
+/* ------------------------------------------------ */
+
+/* align-self */
+div:nth-of-type(2){
+    align-self: flex-start;
+    align-self: flex-end;
+    align-self: center;
+}
+
+/* align-self */
+div:nth-of-type(3){
+    align-self: flex-end;
+}
+
+/* align-self */
+div:nth-of-type(4){
+    align-self: center;
+}
+
+/* ------------------------------------------------ */
+
+/* align-basis */
+div:nth-of-type(2),
+div:nth-of-type(3),
+div:nth-of-type(4) {
+    align-self: flex-start;
+}
+
+/* ------------------------------------------------ */
+
+/* flex-grow and flex-shrink */
+div:nth-of-type(1) {
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+div:nth-of-type(5) {
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+
+
+/* ------------------------------------------------ */
+
+#container div {
+    width: 200px;
+    height: 200px;
+    /* max-width: 300px; */
+    /* font-size: 5em; */
+    text-align: center;
+
+
+    /* flex-basis */
+    /* although our width is 200px still it uses flex-basis width  */
+    flex-basis: 248px;
+
+
+    /* flex-grow */
+    flex-basis: 200px;
+    /* flex-grow: 1; */
+
+    /* flex-shrink */
+    flex-basis: 600px;
+    flex-shrink: 1;
+}

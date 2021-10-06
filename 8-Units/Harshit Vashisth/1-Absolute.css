@@ -1,0 +1,41 @@
+/* ---------------------------------------------------------------------------------------------------
+There are two types units :                         
+                1.Absolute- # px - Prefered for thin borders
+                            # pt 
+                            # cm
+                            # in
+                            # mm
+
+                2.Relative- # em  - Not Prefered personally
+                            # rem  - Prefered for 'font-size', margin, border and paddings i.e all
+                            # vh   - prefered for background images
+                            # vw   - prefered for background images
+                            # %    - Prefered for mostly 'width' and sometimes for 'margin' 
+                            # and more..   
+
+Unit Conversion : 
+    1cm = 38px
+    1in = 2.54cm = 96px 
+    1px = 0.75pt
+    16px = 0.75*16 = 12pt
+
+HARSHIT VASHISTH : 
+    Preferances to use units :
+        1. rem - for font-size, i usually prefers rem for all properties
+        2. em  - for padding and margin but other developers never uses em and me also, instead use rem
+        3. %   - for width and height
+        4. px  - for giving the thin borders
+
+----------------------------------------------------------------------------------------------------*/
+
+p {
+    font-size: 16px;
+    font-size: 12pt;
+
+    font-size: 96px;
+    font-size: 1in;
+    font-size: 2.54cm;
+
+    border: 16px solid red;
+    border: 16pt solid red;
+}

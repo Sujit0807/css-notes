@@ -1,0 +1,67 @@
+/* -----------------------------------------------------------------------------------------------------
+CSS Shadow Effects : 
+    # With CSS you can add shadow to text and to elements.
+    # In these chapters you will learn about the following properties:
+        1. text-shadow
+        2. box-shadow
+----------------------------------------------------------------------------------------------------- */
+
+h1{
+    text-align: center;
+    color: royalblue;
+    font-size: 50px;
+}
+
+h3{
+    text-align: center;
+    font-size: 32px;
+}
+
+/* ------------------------------------------------------------------------ */
+
+.cls1{
+    /* specify the horizontal shadow (2px) and the vertical shadow (2px) */
+    text-shadow: 2px 2px;
+}
+.cls2{
+    /* add a color to the shadow */
+    text-shadow: 2px 2px red;
+}
+.cls3{
+    /* add a blur effect to the shadow */
+    text-shadow: 2px 2px 5px red;
+}
+.cls4{
+    /* example shows a white text with black shadow */
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+.cls5{
+    /* example shows a red neon glow shadow */
+    text-shadow: 0 0 3px #FF0000;
+}
+
+
+/* --------------------------------------------------------------------------
+MULTIPLE SHADOWS :
+    # zero add more than one shadow to the text, you can add a comma-separated
+        list of shadows.
+--------------------------------------------------------------------------- */
+
+.cls6{
+    /* example shows a red and blue neon glow shadow */
+    text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+.cls7{
+    /* example shows a white text with black, blue, and darkblue shadow */
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+/* You can also use the text-shadow property to create a plain border around some text
+     (without shadows) 
+*/
+.cls8{
+    color: greenyellow;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

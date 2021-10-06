@@ -1,0 +1,27 @@
+/* ------------------------------------------------------------------------------------------------
+em - # Relative to the font-size of the element (2em means 2 times the size of the current font)
+     $ BORDER,PADDING AND MARGIN WORKS TOTALLY DIFFERENT IN CASE OF EM i.e it sees current element
+        font-size and sets border of that much times of current element
+------------------------------------------------------------------------------------------------ */
+
+h1 {
+    /* Parent has size 16px i.e html tag*/
+
+    /* font-size = 48px */
+    font-size: 3em;
+
+    /* i.e current element font-size into( X ) that much times = total border  */
+    border: 1.5em solid red;
+
+    /* i.e current element font-size into( X ) that much times = total padding */
+    padding: 3em;
+    margin: 3em;
+}
+
+.box1 {
+    font-size: 20px;
+}
+
+span {
+    color: purple;
+}

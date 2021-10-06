@@ -1,0 +1,85 @@
+/* ------------------------------------------------------------------------------------------
+THE PROBLEM : As mobile devices and tablets became widely available, developers had a 
+                problem... how do we create websites that look good on all sizes?
+
+ONE APPROACH : Early on, it was common to create separate stylesheets for different devices,
+                or even completely different websites for each size.
+
+ENTER RESPONCIVE : These days, we typically create ONE website and stylesheet that is able
+                    to respond to different device sizes and features.
+
+
+Media Queries : Media queries allows us to modify styles depending on particular parameters
+                 like screen width or device type.
+                                    
+------------------------------------------------------------------------------------------ */
+ 
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: lightpink;
+}
+
+h1 {
+    font-size: 6em;
+    text-align: center;
+}
+nav {
+    font-size: 1.5em;
+}
+
+ul,li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Media Queries : # Here, when min-width is 800 and 800+ then apply media queries */
+@media (min-width: 800px) {
+    h1 { 
+        color: brown;
+    }
+}
+
+/* Media Queries : # Here, when max-width is 600 and 600- then apply media queries */
+@media (max-width: 600px) {
+    h1 {
+        color: indigo;
+    }
+}
+
+/* When min-width is 600px and max-width is 800px in between that apply media queries*/
+@media (min-width: 600px) and (max-width: 800px) {
+    h1 {
+        color: red;
+    }
+}
+
+/* Working apply down the size */
+@media (max-width: 1500px) {
+    h1 {
+        color: yellow;
+    }
+}
+@media (max-width: 1200px) {
+    h1 {
+        color: blue;
+    }
+}
+@media (max-width: 1000px) {
+    h1 {
+        color: deeppink;
+    }
+}
+@media (max-width: 800px) {
+    h1 {
+        color: green;
+    }
+}
+
+/* Orientation when landscape */
+@media (max-width: 350px) and (orientation: landscape) {
+    body {
+        background-color: lightcyan;
+    }
+}

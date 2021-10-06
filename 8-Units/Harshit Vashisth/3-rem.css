@@ -1,0 +1,37 @@
+/* -----------------------------------------------------------------------------------------------------------
+rem - # rem is simply stand for ROOT ELEMENT (our root element is '<html>' tag) 
+      # when we are giving font-size as 'rem unit' then that element will take that much times of root element 
+      $ Relative to font-size of the root element
+      $ We can give this rem unit 'to any property' unlike percentages
+      $ You can use 'root psuedo class' as well which has more specificity than normal html tag
+----------------------------------------------------------------------------------------------------------- */
+html {
+    font-size: 10px;
+
+    /* 62.5% of 16px === 10px */
+    font-size: 62.5%;
+}
+
+:root {
+    font-size: 10px;
+}
+
+.box1 {
+    font-size: 1rem;
+}
+
+.text-content {
+    /* AS OUR ROOT ELEMENT HAS FONT-SIZE OF 10px */
+
+    /* i.e 20px font-size */
+    font-size: 2rem;
+
+    /* i.e 10px border */
+    border: 1rem solid red;
+
+    /* i.e margin size 20px */
+    margin: 2rem;
+
+    /* i.e padding size 25px */
+    padding: 2.5rem;
+}

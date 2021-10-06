@@ -1,0 +1,26 @@
+/* ----------------------------------------------------------------------------------------
+Pseudo Elements : # ::first-letter
+                  # ::first-line
+                  # ::selection
+
+NOTE :- ::first-letter and ::first-line works only with block level elements only
+---------------------------------------------------------------------------------------- */
+p::first-letter{
+    font-size: 32px;
+}
+
+p::first-line{
+    color: red;
+}
+
+p::selection{
+    color: white;
+    background: black;
+}
+
+/* for all elements */
+::selection{
+    color: brown;
+    background: lightcyan;
+}
+

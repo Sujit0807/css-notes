@@ -1,0 +1,35 @@
+/* ----------------------------------------------------------------------------
+Fixed : # It will bring this out of document flow 
+        # We are using this property to keep navbar at top
+        # It will also consider the whole page like absolute property
+-----------------------------------------------------------------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 800px;
+    border: 8px solid green;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container h1 {
+    border: 4px solid red;
+    background-color: lightblue;    
+}
+
+.container h3 {
+    background-color: rgba(0, 0, 0, 0.959);
+    color: #fff;
+
+    /* position: fixed */
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.container p {
+    border: 4px solid purple;
+    background: lightgray;
+}

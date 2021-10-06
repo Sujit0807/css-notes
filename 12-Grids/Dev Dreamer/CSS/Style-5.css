@@ -1,0 +1,130 @@
+/* -----------------------------------------------------------------------------------------------
+
+CSS GRID : # CSS grid is the most powerful layout system in css. It's 2-Dimentional System meaning
+               it can be used to layout elements in rows AND columns at the same time.
+       
+               
+Flexbox Vs Grid :
+    # Flexbox : # Flexbox is one dimetional layout model in css (i.e either in row/column)
+    # Grid    : # Grid is two dimetional layout model in css    (i.e row and column)
+ 
+    
+Grid Main Concepts :
+    1. Grid Line
+    2. Grid Track
+    3. Grid Area
+    4. Grid Cell
+    5. Grid Gap
+
+
+Grid Container Properties: 1. grid-template-columns
+                           2. grid-template-rows
+                           3. grid-template-areas
+                           4. grid-template
+                           5. grid-column-gap
+                           6. grid-row-gap
+                           7. grid-gap
+                           8. justify-items
+                           9. align-items
+                           10.place-items
+                           11.justify-content
+                           12.align-content
+                           13.place-content
+                           14.grid-auto-columns
+                           15.grid-auto-rows
+                           16.grid-auto-flow
+                           17.grid 
+
+Grid Items Properties:     1. grid-column-start
+                           2. grid-column-end
+                           3. grid-row-start
+                           4. grid-row-end
+                           5. grid-column
+                           6. grid-row
+                           7. grid-area
+                           8. justify-self
+                           9. align-self
+                           10.place-self
+
+
+
+grid-auto-rows : We can define size of implicitely defined rows    
+grid-auto-flow : Whenever we add new items in grid container we can place them in row/column
+align-items    : For positioning the items vertically                        
+justify-items  : For positioning the items Horizontally 
+align-content  : For placing whole items w.r.t container Vertically                       
+justify-content: For placing whole items w.r.t container Horizontally    
+
+grid-template-areas : This property works hand in hand with grid items property i.e GRID-AREA
+grid-area           : This is property of grid items
+
+grid : This shorthand is used to set either explicit or implicit values on same side
+          But can set explicit to one side and implicit to other side or vice versa
+       # Explicit Value : grid-template-columns/grid-template-rows
+       # Implicit Value : grid-auto-rows/columns, grid-auto-flow
+----------------------------------------------------------------------------------------------- */
+
+#container {
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    outline: 8px solid #4834d4;
+    
+    
+    display: grid;
+
+    /* grid-template-columns */
+    grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+
+    /* grid-template-rows */
+    grid-template-rows: 60px auto 100px;
+
+    /* grid-template-areas */
+    grid-template-areas: 
+    "h h h"
+    "m m s"
+    "f f f";
+}
+
+.item:hover {
+    color: #fff;
+}
+
+.title {
+    text-align: center;
+}
+
+/* ITEM */
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.header {
+    grid-area: h;
+}
+
+.main {
+    grid-area: m;
+}
+
+.sidebar {
+    grid-area: s;
+}
+
+.footer {
+    grid-area: f;
+}

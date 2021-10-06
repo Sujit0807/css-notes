@@ -1,0 +1,41 @@
+/* -----------------------------------------------------------------------------
+Media query types : # print
+                    # screen
+                    # all
+------------------------------------------------------------------------------ */
+
+/* while printing the document */
+@media print {
+    body {
+        color: blue;
+    }
+}
+
+
+
+/*for devices which has a screen */
+@media screen and (max-width: 300px) {
+    body {
+        color: rgb(9, 253, 21);
+    }
+}
+@media only screen and (max-width: 300px) {
+    body {
+        color: rgb(9, 253, 21);
+    }
+}
+
+
+
+/* for all things */
+@media all and (min-width: 301px) and (max-width: 500px){
+    body {
+        color: brown;
+    }
+}
+/* or just do like this, both are same*/
+@media (min-width: 301px) and (max-width: 500px){
+    body {
+        color: brown;
+    }
+}

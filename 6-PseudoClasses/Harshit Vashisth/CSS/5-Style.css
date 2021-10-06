@@ -1,0 +1,34 @@
+/* -------------------------------------------------------------------------------------------------------
+Pseudo Classes :  # :not() - # except that element all elements property should be that one
+                                # But this won't work like expectation, it will inherit that color from body 
+                                # for that include element under body 
+                  # :root  - # Writing :root or html both are same thing but :root has more specificity
+                                # we don't use root for color or backgrounds, instead use body tag
+                                # mostly we use root for css variables
+                  # :empty - # For selecting those elements which are empty
+------------------------------------------------------------------------------------------------------- */
+body :not(p){
+    color: blue;
+}
+
+body :not(.fancy){
+    color: crimson;
+}
+
+
+
+div:empty{
+    background-color: darkgrey;
+    border: 2px solid darkred;
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+
+:root{
+    font-size: 20px;
+    border: 4px ridge blue;
+    background: #333;
+    color: #fff;
+}

@@ -1,0 +1,75 @@
+/* -------------------------------------------------------------------
+Animation : # CSS Animation works hand in hand with keyframes property
+-------------------------------------------------------------------- */
+.title {
+    text-align: center;
+}
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: orangered;
+    position: relative;
+    border: 2px ridge black;
+
+    /* Animation */
+    animation-name: square;
+    animation-duration: 15s;
+
+    /* The animation-timing-function specifies the speed curve of an animation */
+    animation-timing-function: linear;
+    animation-timing-function: ease-in;
+    /* delay at starting */
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    /* animation-iteration-count: infinite; */
+    animation-direction: alternate;
+    /* The animation-fill-mode it maintain style when it is not playing i.e here color will remain red at end*/
+    animation-fill-mode: forwards;
+    /* here color remain orange at end*/
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+
+
+    /* Shorthand for all properties */
+    animation: square 15s linear 2s 2 alternate forwards running;
+}
+
+@keyframes square {
+    from{
+        background-color: red;
+    }
+    to{
+        background-color: blue;
+    }
+
+    /* Or */
+
+    0% {
+        background-color: orangered;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: green;
+        left: 500px;
+        top: 0px;
+    }
+    50% {
+        background-color: yellow;
+        left: 500px;
+        top: 500px;
+        border-radius: 50%;
+    }
+    75% {
+        background-color: orange;
+        left: 0px;
+        top: 500px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        border-radius: 0%;
+    }
+}

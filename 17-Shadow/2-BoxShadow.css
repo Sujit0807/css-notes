@@ -1,0 +1,50 @@
+/* -------------------------------------------------------------------------------------------------
+CSS box-shadow Property :
+    # The CSS box-shadow property applies shadow to elements.
+    # In its simplest use, you only specify the horizontal shadow and the vertical shadow
+------------------------------------------------------------------------------------------------- */
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    width: 250px;
+    height: 200px;    
+    padding: 10px;
+    margin: 50px auto;
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+
+    
+
+    /* Adding simple shadow in horizontal and vertical direction */
+    box-shadow: 10px 15px;
+
+    /* Add a color to the shadow */
+    box-shadow: 10px 15px grey;
+
+    /* Adding blur effect */
+    box-shadow: 10px 15px 12px grey;
+
+    /* Adding spread radius */
+    box-shadow: 10px 15px 12px 2px grey;
+}
+
+
+
+.polaroid{
+    width: 250px;
+    margin: 50px auto;
+    text-align: center;
+
+    /* Adding box-shadow */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box{
+    padding: 10px;
+}
+
+img{
+    width: 100%;
+}

@@ -1,0 +1,192 @@
+/* -----------------------------------------------------------------------------------------------
+CSS GRID : # CSS grid is the most powerful layout system in css. It's 2-Dimentional System meaning
+               it can be used to layout elements in rows AND columns at the same time.
+       
+               
+Flexbox Vs Grid :
+    # Flexbox : # Flexbox is one dimetional layout model in css (i.e either in row/column)
+    # Grid    : # Grid is two dimetional layout model in css    (i.e row and column)
+ 
+    
+Grid Main Concepts :
+    1. Grid Line
+    2. Grid Track
+    3. Grid Area
+    4. Grid Cell
+    5. Grid Gap
+
+
+Grid Container Properties: 1. grid-template-columns
+                           2. grid-template-rows
+                           3. grid-template-areas
+                           4. grid-template
+                           5. grid-column-gap
+                           6. grid-row-gap
+                           7. grid-gap
+                           8. justify-items
+                           9. align-items
+                           10.place-items
+                           11.justify-content
+                           12.align-content
+                           13.place-content
+                           14.grid-auto-columns
+                           15.grid-auto-rows
+                           16.grid-auto-flow
+                           17.grid 
+
+Grid Items Properties:     1. grid-column-start
+                           2. grid-column-end
+                           3. grid-row-start
+                           4. grid-row-end
+                           5. grid-column
+                           6. grid-row
+                           7. grid-area
+                           8. justify-self
+                           9. align-self
+                           10.place-self
+
+
+
+grid-auto-rows : We can define size of implicitely defined rows    
+grid-auto-flow : Whenever we add new items in grid container we can place them in row/column
+align-items    : For positioning the items vertically                        
+justify-items  : For positioning the items Horizontally 
+align-content  : For placing whole items w.r.t container Vertically                       
+justify-content: For placing whole items w.r.t container Horizontally                       
+----------------------------------------------------------------------------------------------- */
+
+/* ITEM */
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+
+    border: 1px solid #222;
+    text-align: center;
+    box-shadow: 1px 2px 3px grey;
+    border-radius: 8px;
+    color: #222;
+    font-size: 2em;
+    font-family: arial, sans-serif;
+    background-color: #f9d423;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item:hover {
+    color: #fff;
+}
+
+.title {
+    text-align: center;
+}
+
+#container {
+    width: 95vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    outline: 8px solid #4834d4;
+
+
+    display: grid;
+
+
+    /* --------------------grid-template-columns-------------------- */
+    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px auto;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr minmax(300px, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(auto-fill, 300px);
+    /* ---------------------------------------------------------------
+    for the below property comment the last 4 div from html page -
+     to see difference between auto-fill and auto-fit
+
+    auto-fill : creates the items even if there are no items to fill
+    auto-fit  : it do not creates the items to fill
+    -----------------------------------------------------------------*/
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+    /* Giving Names to column lines : Use the Square bracket */
+    grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+
+    /* grid-template-rows */
+    grid-template-rows: 100px 50px;
+    /* insert total more 6 divs to html page */
+
+    /* grid-auto-columns */
+    grid-auto-columns: 60px;
+
+    /* grid-auto-rows */
+    grid-auto-rows: 70px ;
+
+
+    /* grid-auto-flow */
+    /* comment last 6 div which were added */
+    grid-template-columns: repeat(10, 1fr);
+    grid-auto-flow: row;
+    grid-auto-flow: column;
+    /* Now uncomment that 6 div */
+
+
+    /* comment the last 6 div now */
+
+
+    /* grid-column-gap */
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+
+    /* grid-row-gap */
+    grid-row-gap: 20px;
+
+    /* Shorthand : grid-gap */
+    grid-gap: 40px;
+    grid-gap: 20px 40px; /* row column */
+
+
+    /* align-items */
+    align-items: center;
+    align-items: start;
+    align-items: end;
+
+ 
+    /* justify-items */
+    justify-items: start;
+    justify-items: end;
+    justify-items: center;
+    justify-items: stretch;
+
+
+    /* Shorthand : for align & justify  */
+    place-items: center stretch;
+    place-items: center;
+    place-items: stretch;
+
+
+    /* align-content */
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;
+
+
+    /* justify-content */
+    grid-template-columns: repeat(3, 150px);
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;
+    justify-content: space-evenly;
+    justify-content: space-around;
+    justify-content: space-between;
+
+
+    /* Shothand : align/justify-content  : align-content justify-content */
+    place-content: center;
+    place-content: center space-evenly;
+
+}

@@ -1,0 +1,19 @@
+/* -----------------------------------------------------------------------------------------
+Pseudo Classes : # :focus
+                 # :required
+----------------------------------------------------------------------------------------- */
+form{
+    padding: 20px;
+    text-align: center;
+}
+
+input:focus{
+    padding: 5px;
+    outline: none;
+    border: 2px solid greenyellow;
+}
+
+input:required{
+    color: red;
+
+}

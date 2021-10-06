@@ -1,0 +1,55 @@
+/* ----------------------------------------------------------------------------------------------------------------
+Positions : # The position property specifies the type of positioning method used for an element
+                (static, relative, fixed, absolute or sticky).
+            # By default it is 'static'
+
+# There are five different position values:
+                                1. static   --> default
+                                2. relative --> moves element from it's original position (Not going out of doc flow)
+                                3. fixed    --> moves element with respect to entire document (going out of doc flow)
+                                                 But it will fixed to that position unlike absolute
+                                4. absolute --> moves element with respect to entire document (going out of doc flow)
+                                5. sticky   --> moves element to that position and stick to that (Not out of doc flow)
+                                                 
+
+# Other properties will require for positions :
+    1. z-index - by default it is zero for all elements
+    2. left
+    3. right 
+    4. top
+    5. bottom                                   
+------------------------------------------------------------------------------------------------------------------*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 800px;
+    border: 8px solid green;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container h1 {
+    border: 4px solid red;
+    background-color: lightblue;
+
+    /* Relative positions will move that element with respect to that original position of element */
+    /* Comment below element(i.e h3 and p) to check whether it is going out of document flow or not */
+    position: relative;
+    top: 50px;
+    left: 50px;
+    z-index: -1;
+}
+
+.container h3 {
+    background-color: rgba(0, 0, 0, 0.336);
+    color: #fff;
+}
+
+.container p {
+    border: 4px solid purple;
+    background: lightgray;
+}
+
+

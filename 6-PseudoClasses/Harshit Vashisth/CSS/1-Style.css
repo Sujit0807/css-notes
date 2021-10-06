@@ -1,0 +1,32 @@
+/* ----------------------------------------------------------------------------------------
+Pseudo Classes : A pseudo-class is used to define a special state of an element.
+
+properties : 
+            # :link 
+            # :visited
+            # :hover
+            # :active
+
+NOTE : THESE PROPERTIES MUST BE IN SAME SEQUENCE
+---------------------------------------------------------------------------------------- */
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: purple;
+}
+
+a:hover{
+    color: green;
+}
+
+a:active{
+    color: yellow;
+}
+
+
+p:hover{
+    color: rgb(22, 49, 206);
+}

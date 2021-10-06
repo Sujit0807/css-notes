@@ -1,0 +1,31 @@
+/* ----------------------------------------------------------------------------------------------
+Pseudo Classes : # :first-child
+                 # :first-of-type
+                 # :last-child
+                 # :last-of-type
+---------------------------------------------------------------------------------------------- */
+body{
+    text-align: center;
+}
+
+/* jo 'p' tag apne parent ke first child he */
+p:first-child{
+    color: red;
+}
+
+/* wo sare 'p' tag jo parent ke pehale 'p' he */
+p:first-of-type{
+    color: blue;
+}
+
+
+
+/* Works same as like first-child but for last-child */
+p:last-child{
+    color: rgb(54, 202, 74);
+}
+
+/* Works same as like first-child but for last-child */
+p:last-of-type{
+    color: darkmagenta;
+}

@@ -1,0 +1,50 @@
+/* ----------------------------------------------------------------------------------------------------------------------------
+PERCENTAGES : 
+        # Relative to the parent element
+        # If you set an element's font-size as a percentage it will be a percentage of the font-size of the element's parent
+        # If you use a percentage for a width value, it will be a percentage of the width of the parent.
+
+        $ WE DON'T USE PERCENTAGES LIKE THIS FOR SETTING FONT-SIZE BUT WE USE FOR SETTING 'WIDTH' AND 'MARGINS'
+-----------------------------------------------------------------------------------------------------------------------------*/
+ 
+p.cls1 {
+    /* As we know default font-size in browser is 16px */
+
+    /* 100% = 16px */
+    font-size: 100%; 
+
+    /* 150% = 24px */
+    font-size: 150%;
+
+    /* 200% = 32px */
+    font-size: 200%;
+}
+
+
+
+div {
+    font-size: 30px;
+    border: 4px solid red;
+    width: 50%;
+}
+
+p.cls2{
+    /* Now our div has font-size is 20px*/
+
+    /* so 100% = 30px */
+    font-size: 100%;
+
+    /* 200% = 60px*/
+    font-size: 200%;
+
+    border: 4px solid black;
+    background-color: rgb(214, 174, 174);
+
+    width: 50%;
+    
+    /* margin: 10px auto; */
+    margin-left: 25%;
+}
+
+
+

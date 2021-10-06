@@ -1,0 +1,35 @@
+/* ----------------------------------------------------------------------------------------
+Pseudo Elements : # ::before
+                  # ::after
+
+NOTE : 1. content property is mendatory, you have to use this "content" property with before
+          and after pseudo elements                
+       2. we cannot select the pseudo elements
+       3. we can use pseudo elements with that elements only, which has some content in it
+       4. we can't add pseudo element before and after image
+----------------------------------------------------------------------------------------- */
+p::before{
+    content: 'HELLO ';
+    display: block;
+
+    border: 4px dotted greenyellow;
+    color: red;
+    margin: 20px 20px;
+    padding: 30px;
+}
+
+p::after{
+    content: ' WORLD !';
+    display: block;
+
+    border: 4px dotted greenyellow;
+    color: red;
+    margin: 20px 20px;
+    padding: 30px;
+}
+
+.main-heading::after{
+    content: "GOOD BYEEE !";
+    display: block;
+    color: orange;
+}

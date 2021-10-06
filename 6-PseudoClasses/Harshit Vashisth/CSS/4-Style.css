@@ -1,0 +1,26 @@
+/* --------------------------------------------------------------------------------------
+Pseudo Classes : # :nth-child()
+                 # :nth-of-type()
+-------------------------------------------------------------------------------------- */
+
+p:nth-child(2){
+    color: red;
+}
+p:nth-child(2n){
+    color: green;
+}
+p:nth-child(2n+1){
+    color: indigo;
+}
+
+p:nth-of-type(2){
+    color: lightcoral;
+}
+p:nth-of-type(2n){
+    color: rgb(48, 36, 155);
+    background-color: silver;
+}
+p:nth-of-type(2n+1){
+    color: purple;
+    background-color: lightgoldenrodyellow;
+}

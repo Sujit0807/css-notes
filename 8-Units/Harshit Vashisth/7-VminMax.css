@@ -1,0 +1,15 @@
+/* --------------------------------------------------------------------
+vmin - # Viewport width or height me se jo bhi chhota hoga uske size ka
+vmax - # Viewport width or height me se jo bhi bada he uske size ka 
+-------------------------------------------------------------------- */
+
+.box {
+    /* the which one is greater, his size as height*/
+    height: 100vmax;
+
+    /* the which one is shorter, his size as height*/
+    height: 100vmin;
+
+    
+    background-color: brown;
+}
